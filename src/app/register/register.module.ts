@@ -1,31 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { RegisterRoutingModule } from './register-routing.module';
-
-import { OTPComponent } from './components/otp/otp.component';
-import { SetPasswordComponent } from './components/set-password/set-password.component';
 import { EmailComponent } from './components/email/email.component';
-import { RegisterComponent } from './register.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OtpComponent } from './components/otp/otp.component';
+import { SetPasswordComponent } from './components/set-password/set-password.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './register.component';
+import { RegisterRoutingModule } from './register-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    OTPComponent,
-    SetPasswordComponent,
     EmailComponent,
-    RegisterComponent,
+    OtpComponent,
+    SetPasswordComponent,
     LoginComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,
     RegisterRoutingModule,
     FormsModule,
     ReactiveFormsModule
-  ],
- 
+  ]
 })
 export class RegisterModule { }

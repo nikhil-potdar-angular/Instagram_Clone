@@ -33,7 +33,7 @@ get f(): { [key: string]: AbstractControl } {
     if (this.registerform.invalid) {
         return;
     }
-    console.log(this.registerform.value);
+    // console.log(this.registerform.value);
     this.service.post('register',this.registerform.value).subscribe(
       (res)=>{
         console.log(res);

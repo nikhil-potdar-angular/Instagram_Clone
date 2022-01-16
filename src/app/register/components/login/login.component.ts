@@ -40,10 +40,10 @@ export class LoginComponent implements OnInit {
       if (this.loginForm.invalid) {
           return;
       }
-      console.log(this.loginForm.value);
+      // console.log(this.loginForm.value);
       this.service.post('login',this.loginForm.value).subscribe(
         (res)=>{
-          console.log(res);
+          // console.log(res);
           this.userData=res
           localStorage.setItem('user',JSON.stringify(this.userData));
           this.router.navigate(['user/profile'])

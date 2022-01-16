@@ -103,9 +103,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/boxicons-2.1.1/css/boxicons.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              
+            ]
           }
         }
       }

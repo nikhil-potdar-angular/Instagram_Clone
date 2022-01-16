@@ -42,10 +42,10 @@ export class SetPasswordComponent implements OnInit {
     if (this.passwordForm.invalid) {
         return;
     }
-    console.log(this.passwordForm.value);
+    // console.log(this.passwordForm.value);
     this.service.post('activate',this.passwordForm.value).subscribe(
       (res)=>{
-        console.log(res);
+        // console.log(res);
        
       }
     )

@@ -37,7 +37,7 @@ export class OtpComponent implements OnInit {
 
     this.service.post('confirm', this.otpForm.value).subscribe(
       (res) => {
-        console.log(res);
+        // console.log(res);
       }
     )
 

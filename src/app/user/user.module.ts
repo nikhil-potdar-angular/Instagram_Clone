@@ -5,12 +5,14 @@ import { UserComponent } from './user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserRoutingModule } from './user-routing.module';
 import 'boxicons';
+import { EditComponent } from './components/edit/edit.component';
 
 
 @NgModule({
   declarations: [
     ProfileComponent,
-    UserComponent
+    UserComponent,
+    EditComponent
   ],
   imports: [
     CommonModule,

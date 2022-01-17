@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { EmailComponent } from './email.component';
 import { HttpService } from 'src/app/services/http.service';
-import {  observable, Observable} from 'rxjs';
+import {  observable, Observable,of} from 'rxjs';
 
 import { ReactiveFormsModule } from '@angular/forms';
 // import 'rxjs/add/observable/from';
@@ -37,13 +37,7 @@ describe('EmailComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should call submit ', () => {
-  //   const fixture = TestBed.createComponent(EmailComponent);
-  //   const app = fixture.componentInstance;
-  //   const submitSpy = spyOn(component, 'onSubmit');
-  //   app.onSubmit();
-  //   expect(component.onSubmit).toHaveBeenCalled();
-  // });
+ 
  
   // it('should call submit ', () => {
   //   let spy= spyOn(service,'post').and.callFake((t)=>
@@ -64,6 +58,44 @@ describe('EmailComponent', () => {
   //    component.onSubmit()
   //    expect(spy).toHaveBeenCalled();
   // });
+  // it("should call getUsers and return list of users", async(() => {
+  //   const response=[];
+
+  //   spyOn(service, 'onSubmit').and.returnValue(of(response))
+
+  //   component.onSubmit()
+
+  //   fixture.detectChanges();
   
+  //   expect(component.res).toEqual(response);
+  // }));
+
+  
+
+  it("should call submit", () => {
+    spyOn(component["service"], "post").and.returnValue(
+      of({
+        err: "test error"
+      })
+    );
+    let callbackSpy = jasmine.createSpy();
+
+    component.onSubmit();
+
+    expect(callbackSpy).toHaveBeenCalled
+  });
+
+//  it('should call subscribe ', () => {
+//   const data = null;
+//   spyOn(service, 'post').and.returnValue(data);
+//   component.onSubmit(); 
+//   data.subscribe({
+//       complete: () => {
+//           expect(component.onSubmit).toHaveBeenCalledWith();
+//       }
+//   });
+    
+//   });
+ 
 
 });

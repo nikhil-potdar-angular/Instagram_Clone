@@ -14,4 +14,13 @@ export class HttpService {
   post(link:string,data:any){
     return this.http.post(this.baseUrl+link,data)
   }
+
+  get(token:string,link:string,data:any){
+   
+  return this.http.get(this.baseUrl+link,data)
+  }
+  put(link:string,json:any,header:any,){
+  return this.http.put(link,json,header)
+    
+  }
 }

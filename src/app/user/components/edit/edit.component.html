@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <body >
     <div class="card w-50 text-center mx-auto mt-3">
         <div class="card-header ">
@@ -22,3 +23,27 @@
         </div>
     </div>
 </body>
+=======
+<div class="card w-50 text-center mx-auto mt-3">
+    <div class="card-header ">
+        Edit profile
+    </div>
+    <div class="card-body">
+        <form [formGroup]="editForm">
+            <div class="form-group">
+                <input type="text" formControlName="name" name="name" id="name" class="form-control input-lg" placeholder=" Name"
+                    tabindex="1">
+            </div>
+            <div class="form-group">
+                <input type="text" formControlName="username" name="username" id="username" class="form-control input-lg" placeholder="User Name"
+                    tabindex="1">
+            </div>
+            <div class="form-group">
+                <input type="email" formControlName="email" name="email" id="email" class="form-control input-lg" placeholder="Email"
+                    tabindex="5">
+            </div>
+            <button (click)="onSave()" class="btn btn-lg btn-primary ">Save</button>
+        </form>
+    </div>
+</div>
+>>>>>>> 7719f8dc5067acf9d8a1767bb3dd96c9aa6a53c4

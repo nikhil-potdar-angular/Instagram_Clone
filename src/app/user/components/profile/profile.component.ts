@@ -11,7 +11,10 @@ export class ProfileComponent implements OnInit {
   token: any
   userData:any
   username:any
+<<<<<<< HEAD
   name:any
+=======
+>>>>>>> 7719f8dc5067acf9d8a1767bb3dd96c9aa6a53c4
   constructor(private router:Router,private service: HttpService) { }
 
   ngOnInit(): void {
@@ -34,8 +37,11 @@ export class ProfileComponent implements OnInit {
     if (localStorage.getItem('userData')) {
       this.userData = JSON.parse(localStorage.getItem('userData'))
       this.username = this.userData.profile.username
+<<<<<<< HEAD
       this.name = this.userData.profile.name
 
+=======
+>>>>>>> 7719f8dc5067acf9d8a1767bb3dd96c9aa6a53c4
     }
   }
   onClick(){

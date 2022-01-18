@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
           // console.log(res);
           this.userData=res
           localStorage.setItem('user',JSON.stringify(this.userData));
-          this.router.navigate(['user/profile'])
+          this.router.navigate(['user'])
          }
       )
   

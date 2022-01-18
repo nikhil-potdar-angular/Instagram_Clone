@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class EmailComponent implements OnInit {
   registerform: FormGroup;
   submitted = false;
-  
+  res:any
   
   constructor(private router:Router,private formBuilder:FormBuilder, private service:HttpService) { }
 
@@ -36,7 +36,8 @@ get f(): { [key: string]: AbstractControl } {
     // console.log(this.registerform.value);
     this.service.post('register',this.registerform.value).subscribe(
       (res)=>{
-        console.log(res);
+       this.res=res
+        console.log(this.res);
        
       }
     )

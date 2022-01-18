@@ -5,6 +5,7 @@ import { LoginComponent } from './register/components/login/login.component';
 import { OtpComponent } from './register/components/otp/otp.component';
 import { SetPasswordComponent } from './register/components/set-password/set-password.component';
 import { RegisterComponent } from './register/register.component';
+import { EditComponent } from './user/components/edit/edit.component';
 import { ProfileComponent } from './user/components/profile/profile.component';
 import { UserComponent } from './user/user.component';
 
@@ -27,6 +28,8 @@ const routes: Routes =
       children:
         [
           { path: 'profile', component: ProfileComponent },
+          { path: 'edit', component: EditComponent },
+
         ]
     },
   ];
